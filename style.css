@@ -37,3 +37,13 @@ p {
     font-size: 2em; /* Adjust font size as needed */
     color: #111; /* Ensure it has a dark color for emphasis */
 }
+
+.manuscript-page #text {
+    max-width: 40%; /* Limits the width of the text to make it slimmer */
+    margin: 0 auto; /* Centers the text container */
+    text-align: justify; /* Ensures clean alignment of the text */
+    line-height: 1.8; /* Adds spacing between lines for better readability */
+    padding: 10px; /* Adds internal padding for a clean appearance */
+    font-family: 'Georgia', serif; /* Ensures an elegant literary font */
+    font-size: 16px; /* Adjusts the font size for readability */
+}
