@@ -4,7 +4,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs tei"
     version="2.0">
-    
+
     <!-- Remove the teiHeader -->
     <xsl:template match="tei:teiHeader"/>
 
@@ -13,7 +13,7 @@
         <div class="manuscript-page">
             <!-- Page Number -->
             <div class="page-number">
-                <xsl:value-of select="//tei:metamark[@function='pagenumber']/tei:num"/>
+                <xsl:value-of select="tei:div/tei:head/tei:div[@class='page-number']/tei:metamark[@function='pagenumber']/tei:num"/>
             </div>
 
             <!-- Add some space after the page number -->
@@ -21,7 +21,7 @@
 
             <!-- Chapter Title -->
             <div class="chapter-title">
-                <xsl:value-of select="tei:div/tei:head"/>
+                <xsl:value-of select="tei:div/tei:head/tei:div[@class='chapter-title']"/>
             </div>
 
             <!-- Text Body -->

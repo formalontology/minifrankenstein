@@ -33,7 +33,8 @@
          <div type="page" n="21r" rend="recto">
             <pb facs="#p21r"/>
             <head>
-               Chapter 7<hi rend="sup"><hi rend="u">th</hi></hi><metamark function="pagenumber"><num><hi rend="circled">75</hi></num></metamark>
+               <div class="chapter-title">Chapter 7<hi rend="sup"><hi rend="u">th</hi></hi></div>
+               <div class="page-number"><metamark function="pagenumber"><num><hi rend="circled">75</hi></num></metamark></div>
             </head>
             <p>
                It was on a dreary night of November<lb/>
