@@ -69,3 +69,22 @@ p {
     line-height: 1.8;
     text-align: justify;
 }
+
+/* Styles specific to manuscript pages */
+.manuscript-page .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.manuscript-page .page-number {
+    font-size: 1em;
+    color: gray;
+}
+
+.manuscript-page .circled {
+    position: absolute;
+    right: 10%;
+    font-weight: bold;
+    font-size: 1.2em;
+}
