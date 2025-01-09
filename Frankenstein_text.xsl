@@ -8,46 +8,34 @@
     <!-- Remove the teiHeader -->
     <xsl:template match="tei:teiHeader"/>
 
-    <!-- Modified template for tei:body -->
+    <!-- Template for the body with page number and chapter title -->
     <xsl:template match="tei:body">
-        <body class="manuscript-page">
-            <div class="row">
-                <div class="col-3">
-                    <xsl:for-each select="//tei:add[@place = 'marginleft']">
-                        <xsl:choose>
-                            <xsl:when test="parent::tei:del">
-                                <del>
-                                    <xsl:attribute name="class">
-                                        <xsl:value-of select="attribute::hand" />
-                                    </xsl:attribute>
-                                    <xsl:value-of select="."/></del><br/>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <span>
-                                    <xsl:attribute name="class">
-                                        <xsl:value-of select="attribute::hand" />
-                                    </xsl:attribute>
-                                    <xsl:value-of select="."/><br/>
-                                </span>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:for-each> 
-                </div>
-                <div class="col-9">
-                    <div class="transcription">
-                        <xsl:apply-templates select="//tei:div"/>
-                    </div>
-                </div>
+        <div class="manuscript-page">
+            <!-- Page Number -->
+            <div class="page-number">
+                <xsl:value-of select="//tei:metamark[@function='pagenumber']/tei:num"/>
             </div>
-        </body>
+
+            <!-- Chapter Title -->
+            <div class="chapter-title">
+                <xsl:value-of select="tei:div/tei:head"/>
+            </div>
+
+            <!-- Text Body -->
+            <div class="text-body">
+                <xsl:apply-templates select="tei:div/tei:p"/>
+            </div>
+        </div>
     </xsl:template>
-    
-    <!-- Template for tei:div -->
+
+    <!-- Template for div elements inside tei:body -->
     <xsl:template match="tei:div">
-        <div class="#MWS"><xsl:apply-templates/></div>
+        <div class="text">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     
-    <!-- Template for tei:p -->
+    <!-- Template for p elements inside tei:div -->
     <xsl:template match="tei:p">
         <p><xsl:apply-templates/></p>
     </xsl:template>
@@ -102,10 +90,4 @@
         </span>
     </xsl:template>
 
-    <!-- Template for page numbers -->
-    <xsl:template match="tei:metamark[@function='pagenumber']">
-        <span class="page-number">
-            <xsl:value-of select="tei:num/tei:hi"/>
-        </span>
-    </xsl:template>
 </xsl:stylesheet>
