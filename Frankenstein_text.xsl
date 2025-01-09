@@ -12,7 +12,7 @@
     <xsl:template match="tei:body">
         <div class="manuscript-page">
             <!-- Page Number (always at the top right) -->
-            <div class="page-number">
+            <div class="page-number" style="position: absolute; top: 10px; right: 10px;">
                 <xsl:value-of select="tei:div/tei:head/tei:metamark[@function='pagenumber']/tei:num"/>
             </div>
 
@@ -23,7 +23,7 @@
             <xsl:choose>
                 <xsl:when test="tei:div[@n='21r']">
                     <!-- Show Chapter Title for 21r -->
-                    <div class="chapter-title">
+                    <div class="chapter-title" style="position: absolute; top: 40px; left: 10px;">
                         Chapter 7
                     </div>
                 </xsl:when>
