@@ -39,11 +39,11 @@ p {
 }
 
 .manuscript-page #text {
-    max-width: 40%; /* Makes the text slimmer */
-    margin: 0 auto; /* Centers the text on the page */
-    text-align: justify; /* Justifies the text for clean edges */
-    line-height: 1.8; /* Adds space between lines */
-    padding: 10px; /* Adds space inside the text container */
-    font-family: 'Georgia', serif; /* Ensures an elegant, literary font */
-    font-size: 16px; /* Adjusts font size for readability */
+    max-width: 30%; /* Makes the text slimmer */
+    margin: 0 auto; /* Centers the text container horizontally */
+    text-align: justify; /* Justifies the text for cleaner alignment */
+    line-height: 1.6; /* Adds spacing between lines for better readability */
+    padding: 20px; /* Adds internal padding for a clean appearance */
+    font-family: 'Georgia', serif; /* Keeps the text in an elegant font */
+    font-size: 16px; /* Adjusts the font size for readability */
 }
