@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/ns/1.0" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -28,7 +27,7 @@
          </sourceDesc>
       </fileDesc>
    </teiHeader>
-  <text>
+   <text>
       <body>
          <div type="page" n="21r" rend="recto">
             <pb facs="#p21r"/>
@@ -72,7 +71,13 @@
                the same colour as the dun white<lb/>
                sockets in which they were set,<lb/>
             </p>
+            <zone type="left_margin">
+                <p><add place="marginleft" hand="#PBS">beautiful</add></p>
+                <p><add place="marginleft" hand="#PBS">handsome</add></p>
+                <p><add place="marginleft" hand="#MWS">yellow</add></p>
+                <p><add place="marginleft" hand="#PBS">of a lustrous black &amp;</add></p>
+            </zone>
          </div>
       </body>
-  </text>
+   </text>
 </TEI>

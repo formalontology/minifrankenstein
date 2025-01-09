@@ -1,6 +1,7 @@
 body {
 
 }
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -33,25 +34,24 @@ p {
 }
 
 .gothic {
-    font-family: 'UnifrakturCook', sans-serif; /* Apply Gothic font */
-    font-size: 2em; /* Adjust font size as needed */
-    color: #111; /* Ensure it has a dark color for emphasis */
+    font-family: 'UnifrakturCook', sans-serif;
+    font-size: 2em;
+    color: #111;
 }
 
 .manuscript-page #text {
-    max-width: 25%; /* Makes the text slimmer */
-    margin: 0 auto; /* Centers the text container horizontally */
-    text-align: justify; /* Justifies the text for cleaner alignment */
-    line-height: 1.6; /* Adds spacing between lines for better readability */
-    padding: 20px; /* Adds internal padding for a clean appearance */
-    font-family: 'Georgia', serif; /* Keeps the text in an elegant font */
-    font-size: 16px; /* Adjusts the font size for readability */
+    max-width: 25%;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
 }
-
 
 .supraAdd {
     position: relative;
-    top: -10px; /* Move text above the line */
+    top: -10px;
     font-size: 0.9em;
     color: #111;
 }
@@ -61,7 +61,7 @@ p {
 }
 
 .overwrittenAdd {
-    color: blue; /* Style overwritten additions distinctly */
+    color: blue;
 }
 
 .transcription {
@@ -70,29 +70,35 @@ p {
     text-align: justify;
 }
 
+.left-margin {
+    position: absolute;
+    left: 10px; /* Adjust for the left margin */
+    top: 50px; /* Adjust to align with the main text */
+    width: 20%; /* Space allocated for margin text */
+    font-size: 0.9em;
+    color: #555;
+}
+
+.marginal-text[data-hand="#PBS"] {
+    color: blue; /* Style Percy Shelley’s text */
+}
+
+.marginal-text[data-hand="#MWS"] {
+    color: green; /* Style Mary Shelley’s text */
+}
+
+.page-number {
+    font-weight: bold;
+}
+
 .manuscript-page .header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 20px; /* Adjust the space between the page number and title */
-}
-
-.manuscript-page .page-number {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: black;
-    position: absolute;
-    right: 20px; /* Position at top-right */
-    top: 20px; /* Place some space between the top and the page number */
-}
-
-.manuscript-page .chapter-title {
-    margin-top: 40px;
-    font-size: 1.5em;
-    font-weight: bold;
+    margin-top: 20px;
 }
 
 .manuscript-page .text-body {
     margin-top: 20px;
-    text-indent: 20px; /* Indent the first paragraph */
+    text-indent: 20px;
 }
