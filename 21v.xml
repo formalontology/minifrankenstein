@@ -30,17 +30,21 @@
     </teiHeader>
     <text>
         <body>
+            <!-- Page 21v: Correct Page Number and Content -->
             <div type="page" n="21v" rend="verso">
                 <pb facs="#p21v"/>
-                <!-- Page Number: Place this at the top right -->
-                <metamark function="pagenumber">
-                    <num><hi rend="circled">76</hi></num>
-                </metamark>
+                
+                <!-- Page Number: Positioned top right for all pages -->
+                <div class="page-number">
+                    <metamark function="pagenumber">
+                        <num><hi rend="circled">76</hi></num>
+                    </metamark>
+                </div>
 
-                <!-- Add some space after the page number -->
+                <!-- Add some space after the page number for proper formatting -->
                 <p style="margin-top: 20px;"></p> <!-- Adjust the height as needed -->
 
-                <!-- Text Body -->
+                <!-- Text Body: Indented paragraphs and content -->
                 <p style="text-indent: 20px;">
                     his shrivelled complexion and strait<lb/>
                     black lips.<lb/>
@@ -57,7 +61,7 @@
                     it with an ardour that far exceeded<lb/>
                     moderation; but now that I had succeed<lb/>
                     ed these dreams vanished and breathless<lb/>
-                    horror and disgust filled my heart.<lb/>
+                    horror and disgust filled my heart.<lb/> 
                     Unable<add place="supralinear" hand="#MWS" rend="blackink">to endure</add> the aspect of the <del type="crossedOut" hand="#MWS" rend="blackink">creature</del><add place="margintop" hand="#MWS" rend="blackink">being</add> I<lb/>
                     had created, I rushed out of the room and<lb/>
                     <del type="crossedOut" hand="#MWS" rend="blackink">remained</del><add place="supralinear" hand="#MWS" rend="blackink">continued</add> a long time traversing my<lb/>
