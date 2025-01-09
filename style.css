@@ -47,3 +47,25 @@ p {
     font-family: 'Georgia', serif; /* Keeps the text in an elegant font */
     font-size: 16px; /* Adjusts the font size for readability */
 }
+
+
+.supraAdd {
+    position: relative;
+    top: -10px; /* Move text above the line */
+    font-size: 0.9em;
+    color: #111;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.overwrittenAdd {
+    color: blue; /* Style overwritten additions distinctly */
+}
+
+.transcription {
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    text-align: justify;
+}

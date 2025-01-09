@@ -8,6 +8,7 @@
     <!-- <xsl:output method="xml" omit-xml-declaration="yes" indent="yes" /> -->
     <xsl:template match="tei:teiHeader"/>
 
+    <!-- Existing body structure -->
     <xsl:template match="tei:body">
         <div class="row">
         <div class="col-3"><br/><br/><br/><br/><br/>
@@ -21,7 +22,7 @@
                             <xsl:value-of select="."/></del><br/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <span >
+                        <span>
                             <xsl:attribute name="class">
                                 <xsl:value-of select="attribute::hand" />
                             </xsl:attribute>
@@ -39,21 +40,50 @@
         </div> 
     </xsl:template>
     
+    <!-- Existing div template -->
     <xsl:template match="tei:div">
         <div class="#MWS"><xsl:apply-templates/></div>
     </xsl:template>
     
+    <!-- Existing paragraph template -->
     <xsl:template match="tei:p">
         <p><xsl:apply-templates/></p>
     </xsl:template>
 
-  
+    <!-- Addition 1: Handle line breaks (place this template below <xsl:template match="tei:p">) -->
+    <xsl:template match="tei:lb">
+        <br/>
+    </xsl:template>
+    
+    <!-- Existing supralinear additions template -->
+    <xsl:template match="tei:add[@place = 'supralinear']">
+        <span class="supraAdd">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <!-- Addition 2: Handle underlined text (add this below the supralinear template) -->
+    <xsl:template match="tei:hi[@rend='u']">
+        <span class="underlined">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <!-- Addition 3: Handle superscript text (add this below the underlined text template) -->
+    <xsl:template match="tei:hi[@rend='sup']">
+        <sup>
+            <xsl:apply-templates/>
+        </sup>
+    </xsl:template>
+
+    <!-- Existing marginleft additions -->
     <xsl:template match="tei:add[@place = 'marginleft']">
         <span class="marginAdd">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
+    <!-- Existing deletions -->
     <xsl:template match="tei:del">
         <del>
             <xsl:attribute name="class">
@@ -63,15 +93,10 @@
         </del>
     </xsl:template>
     
-    <!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
-    <xsl:template match="tei:add[@place = 'supralinear']">
-        <span class="supraAdd">
+    <!-- New template for additions with "overwritten" type -->
+    <xsl:template match="tei:add[@place='overwritten']">
+        <span class="overwrittenAdd">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
-    
-    <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
-
-    
 </xsl:stylesheet>
