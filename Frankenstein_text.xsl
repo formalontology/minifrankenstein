@@ -20,7 +20,7 @@
             <div style="height: 20px;"></div> <!-- Adjust the height as needed -->
 
             <!-- Chapter Title (only for the first page, 21r) -->
-            <xsl:if test="tei:div/tei:head/tei:div[@class='chapter-title']">
+            <xsl:if test="tei:div/@n = '21r'">
                 <div class="chapter-title">
                     <b><xsl:value-of select="tei:div/tei:head/tei:div[@class='chapter-title']"/></b>
                 </div>
