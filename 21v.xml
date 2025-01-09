@@ -32,7 +32,7 @@
         <body>
             <div type="page" n="21v" rend="verso">
                 <pb facs="#p21v"/>
-                <!-- Page Number -->
+                <!-- Page Number: Place this at the top right -->
                 <metamark function="pagenumber">
                     <num><hi rend="circled">76</hi></num>
                 </metamark>
