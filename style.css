@@ -32,4 +32,8 @@ p {
     display: none !important;
 }
 
-
+.gothic {
+    font-family: 'UnifrakturCook', sans-serif; /* Apply Gothic font */
+    font-size: 2em; /* Adjust font size as needed */
+    color: #111; /* Ensure it has a dark color for emphasis */
+}
