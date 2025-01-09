@@ -11,27 +11,18 @@
     <!-- Template for the body with page number and chapter title -->
     <xsl:template match="tei:body">
         <div class="manuscript-page">
-            <!-- Page Number (always at the top right) -->
-            <div class="page-number" style="position: absolute; top: 10px; right: 10px;">
-                <xsl:value-of select="tei:div/tei:head/tei:metamark[@function='pagenumber']/tei:num"/>
+            <!-- Page Number -->
+            <div class="page-number">
+                <xsl:value-of select="tei:div/tei:head/tei:div[@class='page-number']/tei:metamark[@function='pagenumber']/tei:num"/>
             </div>
 
-            <!-- Add space below page number -->
-            <div style="height: 20px;"></div>
+            <!-- Add some space after the page number -->
+            <div style="height: 20px;"></div> <!-- Adjust the height as needed -->
 
-            <!-- Chapter Title (only show for page 21r) -->
-            <xsl:choose>
-                <xsl:when test="tei:div[@n='21r']">
-                    <!-- Show Chapter Title for 21r -->
-                    <div class="chapter-title" style="position: absolute; top: 40px; left: 10px;">
-                        Chapter 7
-                    </div>
-                </xsl:when>
-                <xsl:otherwise>
-                    <!-- No Chapter Title for other pages -->
-                    <div class="chapter-title"></div>
-                </xsl:otherwise>
-            </xsl:choose>
+            <!-- Chapter Title -->
+            <div class="chapter-title">
+                <xsl:value-of select="tei:div/tei:head/tei:div[@class='chapter-title']"/>
+            </div>
 
             <!-- Text Body -->
             <div class="text-body">
