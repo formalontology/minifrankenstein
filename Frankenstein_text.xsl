@@ -5,80 +5,95 @@
     exclude-result-prefixes="xs tei"
     version="2.0">
 
-    <!-- Remove the teiHeader -->
+    <!-- Ignore the teiHeader -->
     <xsl:template match="tei:teiHeader"/>
 
-    <!-- Template for the body with page number and chapter title -->
+    <!-- Transform the body -->
     <xsl:template match="tei:body">
-        <div class="manuscript-page">
-            <!-- Page Number (for all pages) -->
-            <div class="page-number">
-                <xsl:value-of select="tei:div/tei:head/tei:div[@class='page-number']/tei:metamark[@function='pagenumber']/tei:num"/>
+        <div class="row">
+            <div class="col-3">
+                <!-- Left margin additions -->
+                <xsl:for-each select="//tei:add[@place = 'marginleft']">
+                    <xsl:choose>
+                        <xsl:when test="parent::tei:del">
+                            <del>
+                                <xsl:attribute name="class">
+                                    <xsl:value-of select="@hand" />
+                                </xsl:attribute>
+                                <xsl:value-of select="."/>
+                            </del><br/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <span>
+                                <xsl:attribute name="class">
+                                    <xsl:value-of select="@hand" />
+                                </xsl:attribute>
+                                <xsl:value-of select="."/><br/>
+                            </span>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each> 
             </div>
-
-            <!-- Add some space after the page number -->
-            <div style="height: 20px;"></div> <!-- Adjust the height as needed -->
-
-            <!-- Chapter Title (only for the first page, 21r) -->
-            <xsl:if test="tei:div/@n = '21r'">
-                <div class="chapter-title">
-                    <b><xsl:value-of select="tei:div/tei:head/tei:div[@class='chapter-title']"/></b>
+            <div class="col-9">
+                <!-- Page number positioned at the top-right -->
+                <xsl:if test="//tei:head/hi[@rend='circled']">
+                    <div class="page-number" style="text-align: right; font-weight: bold; margin-top: 10px;">
+                        <xsl:value-of select="//tei:head/hi[@rend='circled']"/>
+                    </div>
+                </xsl:if>
+                <div class="transcription">
+                    <xsl:apply-templates select="//tei:div"/>
                 </div>
-            </xsl:if>
-
-            <!-- Text Body -->
-            <div class="text-body">
-                <xsl:apply-templates select="tei:div/tei:p"/>
             </div>
-        </div>
+        </div> 
     </xsl:template>
 
-    <!-- Template for div elements inside tei:body -->
+    <!-- Transform the div -->
     <xsl:template match="tei:div">
-        <div class="text">
+        <!-- Chapter heading: only display if it exists -->
+        <xsl:if test="@type='metadata' and @n='chapter-heading'">
+            <div class="chapter-heading" style="font-weight: bold; text-align: center; font-size: larger;">
+                <xsl:value-of select="tei:head"/>
+            </div>
+        </xsl:if>
+
+        <div class="#MWS">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
-    <!-- Template for p elements inside tei:div -->
+
+    <!-- Transform the paragraphs -->
     <xsl:template match="tei:p">
         <p><xsl:apply-templates/></p>
     </xsl:template>
 
-    <!-- Template for line breaks -->
+    <!-- Transform line breaks -->
     <xsl:template match="tei:lb">
         <br/>
     </xsl:template>
-    
-    <!-- Template for supralinear additions -->
+
+    <!-- Transform supralinear additions -->
     <xsl:template match="tei:add[@place = 'supralinear']">
         <span class="supraAdd">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
-    <!-- Template for underlined text -->
-    <xsl:template match="tei:hi[@rend='u']">
-        <span class="underlined">
+
+    <!-- Transform underlined text -->
+    <xsl:template match="tei:hi[@rend = 'u']">
+        <u>
             <xsl:apply-templates/>
-        </span>
+        </u>
     </xsl:template>
-    
-    <!-- Template for superscript text -->
-    <xsl:template match="tei:hi[@rend='sup']">
+
+    <!-- Transform superscript text -->
+    <xsl:template match="tei:hi[@rend = 'sup']">
         <sup>
             <xsl:apply-templates/>
         </sup>
     </xsl:template>
-    
-    <!-- Template for marginleft additions -->
-    <xsl:template match="tei:add[@place = 'marginleft']">
-        <span class="marginAdd">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <!-- Template for deletions -->
+
+    <!-- Transform deleted text -->
     <xsl:template match="tei:del">
         <del>
             <xsl:attribute name="class">
@@ -87,12 +102,18 @@
             <xsl:apply-templates/>
         </del>
     </xsl:template>
-    
-    <!-- Template for overwritten additions -->
-    <xsl:template match="tei:add[@place='overwritten']">
-        <span class="overwrittenAdd">
+
+    <!-- Transform overwritten text -->
+    <xsl:template match="tei:add[@place = 'overwritten']">
+        <span class="overwritten">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
 
+    <!-- Transform marginleft additions -->
+    <xsl:template match="tei:add[@place = 'marginleft']">
+        <span class="marginAdd">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
 </xsl:stylesheet>
