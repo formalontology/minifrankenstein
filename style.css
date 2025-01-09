@@ -39,7 +39,7 @@ p {
 }
 
 .manuscript-page #text {
-    max-width: 30%; /* Makes the text slimmer */
+    max-width: 20%; /* Makes the text slimmer */
     margin: 0 auto; /* Centers the text container horizontally */
     text-align: justify; /* Justifies the text for cleaner alignment */
     line-height: 1.6; /* Adds spacing between lines for better readability */
