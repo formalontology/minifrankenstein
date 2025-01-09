@@ -1,5 +1,7 @@
 body {
-
+    background-color: #f4f1ea; /* Change this color to whatever you prefer */
+    color: #333; /* Text color for readability */
+    font-family: 'Georgia', serif; /* Optional: Change font for consistency */
 }
 .starter-template {
   padding: 40px 15px;
@@ -32,4 +34,31 @@ p {
     display: none !important;
 }
 
+.title-box {
+    border: none; /* No border for a softer feel */
+    background: url('images/floral-pattern.png') repeat, #fdfdfd; /* Floral pattern with a light background */
+    padding: 30px; /* Spacious padding */
+    text-align: center; /* Center-align text */
+    margin: 40px auto; /* Spacing around the box */
+    width: 70%; /* Slightly narrower for elegance */
+    border-radius: 20px; /* Large rounded corners for softness */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    font-family: 'Georgia', serif; /* Elegant serif font */
+    color: #333; /* Neutral, literary text color */
+}
 
+/* Gothic font for the word Frankenstein */
+.gothic {
+    font-family: 'UnifrakturCook', sans-serif; /* Apply Gothic font */
+    font-weight: bold; /* Make it visually distinct */
+}
+
+.manuscript-page #text {
+    max-width: 40%; /* Makes the text slimmer */
+    margin: 0 auto; /* Centers the text on the page */
+    text-align: justify; /* Justifies the text for clean edges */
+    line-height: 1.8; /* Adds space between lines */
+    padding: 10px; /* Adds space inside the text container */
+    font-family: 'Georgia', serif; /* Ensures an elegant, literary font */
+    font-size: 16px; /* Adjusts font size for readability */
+}
