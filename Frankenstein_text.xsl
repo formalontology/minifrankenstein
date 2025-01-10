@@ -15,24 +15,22 @@
             </div>
             <!-- Main content -->
             <div class="col-9">
-                <!-- Display the page number -->
-                <xsl:choose>
-                    <xsl:when test="//tei:metamark[@function='pagenumber']/num/hi[@rend='circled']">
-                        <p class="page-number">
-                            Page <xsl:value-of select="//tei:metamark[@function='pagenumber']/num/hi[@rend='circled']"/>
-                        </p>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <p class="page-number">
-                            <xsl:value-of select="//tei:p[@style='text-align:right; font-weight:bold;']"/>
-                        </p>
-                    </xsl:otherwise>
-                </xsl:choose>
-                <!-- Render Main Content -->
-                <div class="transcription">
-                    <xsl:apply-templates select="//tei:div"/>
-                </div>
+                <xsl:apply-templates/>
             </div>
+        </div>
+    </xsl:template>
+
+    <!-- Handle page div and its contents -->
+    <xsl:template match="tei:div[@type='page']">
+        <div>
+            <!-- Handle the page number -->
+            <xsl:if test=".//tei:metamark[@function='pagenumber']">
+                <div class="page-number-circle">
+                    <xsl:value-of select=".//tei:metamark[@function='pagenumber']/tei:num/tei:hi[@rend='circled']"/>
+                </div>
+            </xsl:if>
+            <!-- Process the rest of the content, excluding the metamark -->
+            <xsl:apply-templates select="*[not(self::tei:metamark)]"/>
         </div>
     </xsl:template>
 
@@ -44,13 +42,6 @@
                     <xsl:apply-templates/>
                 </p>
             </xsl:for-each>
-        </div>
-    </xsl:template>
-
-    <!-- Transform Div -->
-    <xsl:template match="tei:div">
-        <div>
-            <xsl:apply-templates/>
         </div>
     </xsl:template>
 
