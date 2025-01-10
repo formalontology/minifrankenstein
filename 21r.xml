@@ -35,9 +35,9 @@
             <metamark function="pagenumber"><num><hi rend="circled">75</hi></num></metamark>
             <zone type="left_margin">
                 <p><add place="marginleft" hand="#PBS">beautiful</add></p>
-                <p><add place="marginleft" hand="#PBS">handsome</add></p>
+                <p><add place="marginleft" hand="#MWS"><del rend="strikethrough">handsome</del></add></p>
                 <p><add place="marginleft" hand="#MWS">yellow</add></p>
-                <p><add place="marginleft" hand="#MWS">of a lustrous black &amp;</add></p>
+                <p><add place="marginleft" hand="#PBS">of a lustrous black &amp;</add></p>
             </zone>
             <p style="text-align:center">
                Chapter 7<hi rend="sup"><hi rend="u">th</hi></hi>
