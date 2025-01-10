@@ -71,9 +71,7 @@ color: blue;
 .marginal-text[data-hand="#MWS"] {
 color: green;
 }
-.marginal-text[data-hand="#MWS"] {
-color: green; /* Style Mary Shelley's text */
-}
+
 /* Style for page numbers to appear in a circle /
 .page-number-circle {
 display: inline-block;
@@ -89,7 +87,7 @@ line-height: 40px;
 margin: 10px 0;
 position: relative;  / Add this /
 z-index: 1;         / Add this */
-}
+
 .manuscript-page .header {
 display: flex;
 justify-content: space-between;
@@ -109,16 +107,22 @@ padding-left: 4em;
 .poem {
 font-style: italic;
 }
+
 /* Modifications for color-coding */
 .mws {
-color: green;
+    color: green; /* Ensure Mary Shelley's text is green */
+    opacity: 1;
 }
+  
 .pbs {
-color: blue;
+    color: blue; /* Ensure Percy Shelley's text is blue */
+    opacity: 1;
 }
+  
 .highlight-mws .pbs {
-opacity: 0.5; /* Adjust the opacity value as needed */
+    opacity: 0.5; /* Fade Percy Shelley's text */
 }
+  
 .highlight-pbs .mws {
-opacity: 0.5; /* Adjust the opacity value as needed */
+    opacity: 0.5; /* Fade Mary Shelley's text */
 }

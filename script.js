@@ -115,6 +115,7 @@ function selectHand(event) {
       element.style.color = 'black';
       element.style.opacity = '1';
     });
+    
   } else if (event.target.value == 'Mary') {
     text.style.color = 'green';
     text.style.opacity = '1';
@@ -126,9 +127,10 @@ function selectHand(event) {
       element.style.color = 'black';
       element.style.opacity = '0.5';
     });
-  } else {
+
+  } else if (event.target.value == 'Percy') {
     text.style.color = 'black';
-    text.style.opacity = '0.5';
+    text.style.opacity = '05';
     PercyArray.forEach(element => {
       element.style.color = 'blue';
       element.style.opacity = '1';
