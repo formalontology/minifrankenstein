@@ -67,4 +67,19 @@
             <xsl:apply-templates/>
         </del>
     </xsl:template>
+
+    <!-- Handle text by Mary Shelley -->
+    <xsl:template match="*[@hand='#MWS']">
+        <span class="hand-MWS">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <!-- Handle text by Percy Shelley -->
+    <xsl:template match="*[@hand='#PBS']">
+        <span class="hand-PBS">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
 </xsl:stylesheet>

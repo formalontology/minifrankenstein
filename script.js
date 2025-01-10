@@ -116,3 +116,62 @@ function documentLoader() {
   }
 // write another function that will toggle the display of the deletions by clicking on a button
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)
+
+
+function selectHand(event) {
+  var visible_mary = document.getElementsByClassName('hand-MWS');
+  var visible_percy = document.getElementsByClassName('hand-PBS');
+  
+  var MaryArray = Array.from(visible_mary);
+  var PercyArray = Array.from(visible_percy);
+
+  if (event.target.value == 'both') {
+      MaryArray.forEach(element => {
+          element.style.color = 'black';
+      });
+      PercyArray.forEach(element => {
+          element.style.color = 'black';
+      });
+  } else if (event.target.value == 'Mary') {
+      MaryArray.forEach(element => {
+          element.style.color = 'green';
+      });
+      PercyArray.forEach(element => {
+          element.style.color = 'black';
+      });
+  } else {
+      PercyArray.forEach(element => {
+          element.style.color = 'blue';
+      });
+      MaryArray.forEach(element => {
+          element.style.color = 'black';
+      });
+  }
+}
+
+// Function for reading text view
+function showReadingText() {
+  const deletions = document.querySelectorAll('del');
+  const additions = document.querySelectorAll('add');
+  
+  // Toggle between reading view and normal view
+  if (deletions[0]?.style.display !== 'none') {
+      // Switch to reading view
+      deletions.forEach(del => {
+          del.style.display = 'none';
+      });
+      additions.forEach(add => {
+          add.style.position = 'static';
+          add.style.verticalAlign = 'baseline';
+      });
+  } else {
+      // Switch back to normal view
+      deletions.forEach(del => {
+          del.style.display = 'inline';
+      });
+      additions.forEach(add => {
+          add.style.position = '';
+          add.style.verticalAlign = '';
+      });
+  }
+}
