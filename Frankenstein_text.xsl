@@ -8,36 +8,33 @@
 
     <!-- Transform the body -->
     <xsl:template match="tei:body">
-        <div class="row">
-            <!-- Left margin for marginal text -->
-            <div class="col-3 left-margin">
-                <xsl:apply-templates select="//tei:zone[@type='left_margin']"/>
-            </div>
-            <!-- Main content -->
-            <div class="col-9">
-                <xsl:apply-templates/>
-            </div>
-        </div>
-    </xsl:template>
-
-    <!-- Handle page div and its contents -->
-    <xsl:template match="tei:div[@type='page']">
-        <div>
-            <!-- Handle the page number -->
-            <xsl:if test=".//tei:metamark[@function='pagenumber']">
-                <div class="page-number-circle">
-                    <xsl:value-of select=".//tei:metamark[@function='pagenumber']/tei:num/tei:hi[@rend='circled']"/>
+        <div class="manuscript-page">
+            <div class="row">
+                <!-- Left margin for marginal text -->
+                <div class="col-3">
+                    <xsl:apply-templates select=".//tei:zone[@type='left_margin']"/>
                 </div>
-            </xsl:if>
-            <!-- Process the rest of the content, excluding the metamark -->
-            <xsl:apply-templates select="*[not(self::tei:metamark)]"/>
+                <!-- Main content -->
+                <div class="col-9">
+                    <!-- Handle the page number -->
+                    <xsl:if test=".//tei:metamark[@function='pagenumber']">
+                        <div class="page-number-circle">
+                            <xsl:value-of select=".//tei:metamark[@function='pagenumber']/tei:num/tei:hi[@rend='circled']"/>
+                        </div>
+                    </xsl:if>
+                    <!-- Main text content -->
+                    <div class="transcription">
+                        <xsl:apply-templates select=".//tei:div[@type='page']/*[not(self::tei:metamark) and not(self::tei:zone)]"/>
+                    </div>
+                </div>
+            </div>
         </div>
     </xsl:template>
 
     <!-- Handle Marginal Notes -->
     <xsl:template match="tei:zone[@type='left_margin']">
         <div class="left-margin">
-            <xsl:for-each select="tei:line/add">
+            <xsl:for-each select="tei:p/tei:add[@place='marginleft']">
                 <p class="marginal-text" data-hand="{@hand}">
                     <xsl:apply-templates/>
                 </p>

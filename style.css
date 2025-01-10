@@ -71,16 +71,23 @@ p {
 }
 
 .left-margin {
-    position: absolute;
-    left: 10px; /* Adjust for the left margin */
-    top: 50px; /* Adjust to align with the main text */
-    width: 20%; /* Space allocated for margin text */
+    position: relative;  /* Changed from absolute */
+    width: 100%;        /* Changed from 20% */
     font-size: 0.9em;
     color: #555;
+    padding: 10px;
+}
+
+.marginal-text {
+    margin-bottom: 10px;  /* Add space between margin notes */
 }
 
 .marginal-text[data-hand="#PBS"] {
-    color: blue; /* Style Percy Shelley’s text */
+    color: blue;
+}
+
+.marginal-text[data-hand="#MWS"] {
+    color: green;
 }
 
 .marginal-text[data-hand="#MWS"] {
