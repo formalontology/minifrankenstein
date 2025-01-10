@@ -42,12 +42,17 @@
         </div>
     </xsl:template>
 
-    <!-- Transform Supralinear Additions -->
-    <xsl:template match="tei:add[@place='supralinear']">
-        <span class="supralinear">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
+    <!-- Add this new template for superlinear text -->
+    <xsl:template match="tei:add[@place='superlinear']">
+    <sup>
+        <xsl:if test="@hand">
+            <xsl:attribute name="class">
+                <xsl:value-of select="concat('hand-', substring-after(@hand, '#'))"/>
+            </xsl:attribute>
+        </xsl:if>
+        <xsl:apply-templates/>
+    </sup>
+</xsl:template>
 
     <!-- Transform Standard Paragraph -->
     <xsl:template match="tei:p">

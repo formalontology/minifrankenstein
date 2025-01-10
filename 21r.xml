@@ -40,11 +40,14 @@
                <p><add place="marginleft" hand="#PBS">of a lustrous black &amp;</add></p>
             </zone>
             <p>
-                <line rend="center"><milestone unit="tei:head" spanTo="#c56-0045.04"/>Chapter 7<hi rend="sup"><hi rend="underline">th</hi></hi><anchor xml:id="c56-0045.04"/></line>
+                <line rend="center"><milestone unit="tei:head" spanTo="#c56-0045.04"/>Chapter 7<hi rend="sup"><hi rend="u">th</hi></hi><anchor xml:id="c56-0045.04"/></line>
             </p>
             <p rend="indent1">
                It was on a dreary night of November<lb/>
-               that I beheld <del rend="strikethrough"><add place="superlinear" hand="#PBS">the frame on whic</add></del> my man comple<mod>
+               that I beheld <mod>
+                    <del rend="strikethrough">the frame on whic</del>
+                    <add place="superlinear" hand="#PBS">the frame on whic</add>
+               </mod> my man comple<mod>
                     <del rend="overwritten">at</del>
                     <add place="intralinear">te</add>
                     <add>ed</add>
