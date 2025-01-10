@@ -33,21 +33,41 @@
       <body>
          <div type="page" n="24r" rend="recto">
             <pb facs="#p24r"/>
-               <metamark function="pagenumber"><num><hi rend="circled">81</hi></num></metamark>
+            <metamark function="pagenumber"><num><hi rend="circled">81</hi></num></metamark>
+            <zone type="left_margin">
+               <p><add place="marginleft" hand="#MWS">"a year with</add></p>
+               <p><add place="marginleft" hand="#MWS">"out greek &#x2013;I</add></p>
+               <p><add place="marginleft" hand="#MWS">"eat heartily</add></p>
+               <p><add place="marginleft" hand="#MWS">"without greek</add></p>
+               <p><add place="marginleft" hand="#MWS"><unclear>of-</unclear></add></p>
+            </zone>
+            <zone type="left_margin">
+               <p><add place="marginleft" hand="#PBS">have</add></p>
+            </zone>
             <p>
-               "and Indeed I believe I left him<lb/>
+               "and indeed I believe I left him<lb/>
                "incredulous to the last for his con<lb/>
                "stant answer to my applications<lb/>
-               "was the same as <add place="supralinear" hand="#MWS" rend="blackink">that of</add> the dutch school<lb/>
+               "was the same as <mod>
+                  <add place="supralinear" hand="#MWS" rend="blackink">that of</add>
+               </mod>the dutch school<lb/>
                "master in the Vicar of Wakefield-<lb/>
-               <add place="marginleft" hand="#MWS" rend="blackink">"<del type="crossedOut" hand="#MWS" rend="blackink">a year</del> with<lb/>"out greek -I<lb/>"eat heartily<lb/>withoug greek<lb/>of-</add>
-               <del type="crossedOut" hand="#MWS" rend="blackink">"I live very well yet I do not know</del><lb/>
-               <del type="crossedOut" hand="#MWS" rend="blackink">"Greek</del>" I have ten thousand florins-<lb/>
+               <del type="crossedOut" hand="#MWS" rend="blackink">"I live very well yet I do not know Greek</del> I have ten thousand florins-<lb/>
                "But his affection for me at<lb/>
-               "lenght overcame his dislike for<lb/>
+               "length overcame his dislike for<lb/>
                "learning, and he permitted me<lb/>
-               "to <add place="supralinear" hand="#PBS" rend="blackink">under</add>take a voyage <add place="supralinear" hand="#PBS" rend="blackink">of discovery</add> to the land of<lb/>
-               "knowledge."<lb/>
+               "to <mod>
+                  <add place="supralinear" hand="#PBS" rend="overwritten">
+                        <metamark function="insert">^</metamark>
+                        <add place="supralinear" hand="#PBS" rend="blackink">under</add>
+                     </add>
+                  </mod>take a voyage <mod>
+                     <add place="supralinear" hand="#PBS" rend="overwritten">
+                        <metamark function="insert">^</metamark>
+                        <add place="supralinear" hand="#PBS" rend="blackink">of discovery</add>
+                     </add>
+                  </mod> to the land of<lb/>
+                  "knowledge."<lb/>
             </p>
             <p>
                "And my father, brothers &amp; Eliza<lb/>
@@ -65,8 +85,19 @@
                "been watching for several nights."<lb/>
                "You have guessed right" I replied<lb/>
                "I have lately been so engaged in<lb/>
-               "several<add place="supralinear" hand="#PBS" rend="blackink"><del type="crossedOut" hand="#PBS" rend="blackink">studious</del> one</add> occupations that I did<lb/>
-               <add place="marginleft" hand="#PBS" rend="blackink">have</add>"not allow<add place="overwritten" hand="#PBS" rend="blackink">ed</add><add place="supralinear" hand="#MWS" rend="blackink">myself</add> sufficient rest as you<lb/>
+               "<mod>
+                  <del rend="strikethrough" hand="#MWS">several</del>
+                  <add place="supralinear" hand="#PBS" rend="overwritten"><del rend="strikethrough">studious</del> one</add>
+               </mod> occupation<del rend="strikethrough" hand="#MWS">s</del> that I <mod>
+                  <del rend="strikethrough" hand="#MWS">did</del>
+                  <anchor xml:id="c56-0051.04"/>
+               </mod><lb/>
+               "not allow<mod>
+                  <add place="intralinear" hand="#PBS">ed</add>
+               </mod><mod>
+                  <add place="sublinear"><metamark function="insert">^</metamark></add>
+                  <add place="supralinear" hand="#MWS">myself</add>
+               </mod> sufficient rest as you<lb/>
             </p>
          </div>
       </body>
