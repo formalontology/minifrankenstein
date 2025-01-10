@@ -181,3 +181,33 @@ function showReadingText() {
     });
   }
 }
+
+function addNavigationButtons() {
+  const navigationDiv = document.createElement('div');
+  navigationDiv.className = 'navigation';
+
+  // Extract current page number from the URL
+  const currentPageMatch = window.location.pathname.match(/page(\d+)/);
+  const currentPage = currentPageMatch ? parseInt(currentPageMatch[1]) : null;
+
+  // Add "Previous Page" button if not on the first manuscript
+  if (currentPage > 1) {
+    const prevButton = document.createElement('button');
+    prevButton.textContent = 'Previous Page';
+    prevButton.onclick = () => window.location.href = `page${currentPage - 1}.html`;
+    navigationDiv.appendChild(prevButton);
+  }
+
+  // Add "Next Page" button if not on the last manuscript
+  if (currentPage && currentPage < 10) {
+    const nextButton = document.createElement('button');
+    nextButton.textContent = 'Next Page';
+    nextButton.onclick = () => window.location.href = `page${currentPage + 1}.html`;
+    navigationDiv.appendChild(nextButton);
+  }
+
+  // Add the navigation buttons to the page
+  document.body.appendChild(navigationDiv);
+}
+
+addNavigationButtons();
