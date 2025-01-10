@@ -2,80 +2,113 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Frankenstein</title>
-        <author corresp="#MWS">Mary Wollstonecraft Shelley</author>
-        <editor corresp="#PBS">Percy Bysshe Shelley</editor>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>University of Antwerp</publisher>
-        <date>8 December 2023</date>
-        <availability>
-          <licence target="https://iiif.bodleian.ox.ac.uk/iiif/mirador/53fd0f29-d482-46e1-aa9d-37829b49987d">
-            <p>Original text by Mary Shelley (1816). Public domain, under a CC-BY-NC 4.0 licence.</p>
-          </licence>
-        </availability>
-      </publicationStmt>
-      <sourceDesc>
-        <p>Draft of Frankenstein, [August or September] – [?December] 1816. | Bodleian MS. 
-          Abinger c.56 (formerly designated Dep. 477/1) consists of 62 leaves originally 
-          bound in Notebook A, one of two now disbound notebooks in which Mary W. Shelley 
-          (MWS) drafted the two-volume version of Frankenstein. The draft in c.56 runs 
-          from the beginning to the end of Volume I, concluding just as the Creature is 
-          about to begin his tale to Victor. </p>
-      </sourceDesc>
-    </fileDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <div type="page" n="22v" rend="recto">
-        <pb facs="#p22r"/>
-        <metamark function="pagenumber"><num><hi rend="circled">77</hi></num></metamark>
-      <p>
-                    to change and I thought that I held<lb/>
-                    the corpse of my dead mother in my arms<del type="overwritten" hand="#MWS">,</del>
-                    <add place="intralinear" hand="#MWS">:</add><lb/>
-                    <add place="intralinear" hand="#MWS">A</add> shroud enveloped her form &#x26; I saw<lb/>
-                    the grave worms crawling in the folds of<lb/>
-                    the flannel; I started <add place="supralinear" hand="#MWS">from my sleep</add><lb/>
-                    with horror, a cold dew covered my forehead<lb/>
-                    my teeth <del type="crossedOut" hand="#MWS">ah</del> chattered and every limb<lb/>
-                    <add place="supralinear" hand="#MWS">became</add> convulsed, when, by the dim and<lb/>
-                    yellow light of the moon as it forced<lb/>
-                    its way through the window shutters, I<lb/>
-                    beheld the wretch — the miserable<lb/>
-                    monster whom I had created; he held<lb/>
-                    up the curtain, and his eyes; if eyes<lb/>
-                    they may be called, were fixed on me — His<lb/>
-                    <add place="marginleft" hand="#PBS">inarticulate</add> jaws opened and he muttered<lb/>
-                    <add place="marginleft" hand="#PBS">sounds</add> while a grin wrinkled his cheeks. He<lb/>
-                    might have spoken but I did not<lb/>
-                    hear — one <choice><sic>had</sic><corr>hand</corr></choice> was stretched out<lb/>
-                    to detain me but I escaped and<lb/>
-                    rushed down the stairs; I took refuge in<lb/>
-                    a court-yard belonging to the house<lb/>
-                    which I inhabited; where I remained<lb/>
-                    <add place="marginleft" hand="#PBS">during</add> the rest of the night walking up and<lb/>
-                    down in the greatest agitation; listening<lb/>
-                    attentively, catching and fearing each<lb/>
-                    sound as if it were to announce the<lb/>
-                    arrival of the demoniacal corpse to<lb/>
-                    which I had so miserably given life.<lb/>
-                </p>
-                <p>
-                    Oh! no mortal could support<lb/>
-                    the horror of that countenance. A<lb/>
-                    mummy <add place="supralinear" hand="#PBS">again</add> endued with<lb/>
-                    <add place="supralinear" hand="#PBS">animation</add> could not be.<lb/>
-                </p>
-                <p class="margin-words">
-                    <add place="marginleft" hand="#PBS">inarticulate</add><br/>
-                    <add place="marginleft" hand="#PBS">sounds</add><br/>
-                    <add place="marginleft" hand="#PBS">during</add>
-                </p>
-            </div>
-        </body>
-    </text>
+ <teiHeader>
+   <fileDesc>
+     <titleStmt>
+       <title>Frankenstein</title>
+       <author corresp="#MWS">Mary Wollstonecraft Shelley</author>
+       <editor corresp="#PBS">Percy Bysshe Shelley</editor>
+     </titleStmt>
+     <publicationStmt>
+       <publisher>University of Antwerp</publisher>
+       <date>8 December 2023</date>
+       <availability>
+         <licence target="https://iiif.bodleian.ox.ac.uk/iiif/mirador/53fd0f29-d482-46e1-aa9d-37829b49987d">
+           <p>Original text by Mary Shelley (1816). Public domain, under a CC-BY-NC 4.0 licence.</p>
+         </licence>
+       </availability>
+     </publicationStmt>
+     <sourceDesc>
+       <p>Draft of Frankenstein, [August or September] – [?December] 1816. | Bodleian MS. 
+         Abinger c.56 (formerly designated Dep. 477/1) consists of 62 leaves originally 
+         bound in Notebook A, one of two now disbound notebooks in which Mary W. Shelley 
+         (MWS) drafted the two-volume version of Frankenstein. The draft in c.56 runs 
+         from the beginning to the end of Volume I, concluding just as the Creature is 
+         about to begin his tale to Victor. </p>
+     </sourceDesc>
+   </fileDesc>
+ </teiHeader>
+ <text>
+   <body>
+     <div type="page" n="22v" rend="recto">
+       <pb facs="#p22r"/>
+       <metamark function="pagenumber"><num><hi rend="circled">77</hi></num></metamark>
+       <zone type="left_margin">
+           <p><add place="marginleft" hand="#PBS">inarticulate</add></p>
+           <p><add place="marginleft" hand="#PBS">sounds</add></p>
+           <p><add place="marginleft" hand="#PBS">during</add></p>
+       </zone>
+       <p>
+           to change and I thought that I held<lb/>
+           the corpse of my dead mother in my arms<mod>
+               <del rend="overwritten">,</del>
+               <add place="intralinear" hand="#PBS">:</add>
+           </mod><lb/>
+           <mod>
+               <del rend="overwritten">a</del>
+               <add place="intralinear">A</add>
+           </mod> shroud enveloped her form &amp; I saw<lb/>
+           the grave worms crawling in the folds of<lb/>
+           the flannel; I started <mod>
+               <add place="sublinear"><metamark function="insert">^</metamark></add>
+               <add place="superlinear">from my sleep</add>
+           </mod> with horror, a<lb/>
+           <del rend="strikethrough">when I saw</del> cold dew covered my forehead<lb/>
+           my teeth <del rend="strikethrough">ah</del> chattered and every limb<lb/>
+           <mod>
+               <del rend="strikethrough">was</del>
+               <add place="superlinear" hand="#PBS">became</add>
+           </mod> convul<mod>
+               <del rend="overwritten"><unclear unit="chars" extent="1"/></del>
+               <add place="intralinear">s</add>
+           </mod>ed, when, by the dim and<lb/>
+           yellow light of the moon as it forced<lb/>
+           its way through the window shutters, I<lb/>
+           beheld the wretch &#x2014; the miserable<lb/>
+           monster whom I had created; he hel<mod>
+               <del rend="overwritten"><unclear unit="chars" extent="1"/></del>
+               <add place="intralinear">d</add>
+           </mod><lb/>
+           up the curtain, and his eyes<add place="superlinear" hand="#PBS">&#x2014;</add>; if eyes<lb/>
+           they may be called,<add place="superlinear">&#x2014;</add> were fixed on me&#x2013;His<lb/>
+           jaws opened and he muttered <del rend="strikethrough"><add place="superlinear" hand="#PBS">in</add></del> some <mod>
+               <del rend="strikethrough">words</del>
+               <anchor xml:id="c56-0047.01"/>
+           </mod><lb/>
+           while a grin wrinkled his cheeks. He<lb/>
+           might have spoken but I did not<lb/>
+           hear &#x2014; one <del rend="strikethrough">had</del> hand was stretched out<lb/>
+           to detain me but I escaped and <del rend="strikethrough">ran</del><lb/>
+           rushed down <mod>
+               <del rend="strikethrough"><add place="superlinear" hand="#PBS">the</add></del>
+           </mod> stair<mod>
+               <retrace cause="fix" hand="#PBS">s</retrace>
+               <del rend="strikethrough"><add place="intralinear" hand="#PBS">case</add></del>
+           </mod> I took refuge in<lb/>
+           a court-yard belonging to the house<lb/>
+           which I inhabited; where I remained<lb/>
+           <anchor xml:id="c56-0047.03"/>the rest of the night walking up and<lb/>
+           down in the greatest agitation; listen<lb/>
+           ing attentively, catching and fearing each<lb/>
+           sound as if it were to announce the<lb/>
+           arrival of the demoniacal corpse to<lb/>
+           which I had so miserabl<mod>
+               <del rend="overwritten">e</del>
+               <add hand="#PBS" place="intralinear">y</add>
+           </mod> given life.<lb/>
+       </p>
+       <p>
+           Oh! no mortal could support<lb/>
+           the horror of that countenance. A<lb/>
+           mummy <mod>
+               <add place="sublinear"><metamark function="insert">^</metamark></add>
+               <add place="superlinear">again</add>
+           </mod> endued with <mod>
+               <del rend="strikethrough">life</del>
+               <add place="superlinear" hand="#PBS">animation</add>
+           </mod> could not be<lb/>
+       </p>
+     </div>
+   </body>
+ </text>
 </TEI>
