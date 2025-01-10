@@ -1,141 +1,140 @@
 body {
 }
 .starter-template {
-padding: 40px 15px;
-text-align: center;
+    padding: 40px 15px;
+    text-align: center;
 }
 img {
-max-width: 100%;
+    max-width: 100%;
 }
 p {
-text-indent: 10px;
+    text-indent: 10px;
 }
 .row {
-width: 100%;
-margin-left: 0;
+    width: 100%;
+    margin-left: 0;
 }
 .col {
-margin-left: 10px;
-margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .marginAdd {
-display: none;
+    display: none;
 }
 .mirador-canvas-nav {
-display: none !important;
+    display: none !important;
 }
 .gothic {
-font-family: 'UnifrakturCook', sans-serif;
-font-size: 2em;
-color: #111;
+    font-family: 'UnifrakturCook', sans-serif;
+    font-size: 2em;
+    color: #111;
 }
 .manuscript-page #text {
-max-width: 25%;
-margin: 0 auto;
-text-align: justify;
-line-height: 1.6;
-padding: 20px;
-font-family: 'Georgia', serif;
-font-size: 16px;
+    max-width: 25%;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
 }
 .supraAdd {
-position: relative;
-top: -10px;
-font-size: 0.9em;
-color: #111;
+    position: relative;
+    top: -10px;
+    font-size: 0.9em;
+    color: #111;
 }
 .underlined {
-text-decoration: underline;
+    text-decoration: underline;
 }
 .overwrittenAdd {
-color: blue;
+    color: blue;
 }
 .transcription {
-font-family: 'Georgia', serif;
-line-height: 1.8;
-text-align: justify;
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    text-align: justify;
 }
 .left-margin {
-position: relative;  /* Changed from absolute /
-width: 100%;        / Changed from 20% */
-font-size: 0.9em;
-color: #555;
-padding: 10px;
+    position: relative;  
+    width: 100%;        
+    font-size: 0.9em;
+    color: #555;
+    padding: 10px;
 }
 .marginal-text {
-margin-bottom: 10px;  /* Add space between margin notes */
+    margin-bottom: 10px;  
 }
 .marginal-text[data-hand="#PBS"] {
-color: blue;
+    color: blue;
 }
 .marginal-text[data-hand="#MWS"] {
-color: green;
+    color: green;
 }
 
-
 .page-number-circle {
-display: inline-block;
-font-size: 1.2em;
-font-weight: bold;
-color: black;
-border: 2px solid black;
-border-radius: 50%;
-width: 40px;
-height: 40px;
-text-align: center;
-line-height: 40px;
-margin: 10px 0;
-position: relative;
-z-index: 1;         
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px 0;
+    position: relative;
+    z-index: 1;         
 }
 
 .manuscript-page .header {
-display: flex;
-justify-content: space-between;
-align-items: baseline;
-margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 20px;
 }
 .manuscript-page .text-body {
-margin-top: 20px;
-text-indent: 20px;
+    margin-top: 20px;
+    text-indent: 20px;
 }
 .indent-1 {
-padding-left: 2em;
+    padding-left: 2em;
 }
 .indent-2 {
-padding-left: 4em;
+    padding-left: 4em;
 }
 .poem {
-font-style: italic;
+    font-style: italic;
 }
 
 /* Modifications for color-coding */
 .mws {
-    color: green; /* Ensure Mary Shelley's text is green */
+    color: green; 
     opacity: 1;
 }
   
 .pbs {
-    color: blue; /* Ensure Percy Shelley's text is blue */
+    color: blue; 
     opacity: 1;
 }
   
 .highlight-mws .pbs {
-    opacity: 0.5; /* Fade Percy Shelley's text */
+    opacity: 0.5; 
 }
   
 .highlight-pbs .mws {
-    opacity: 0.5; /* Fade Mary Shelley's text */
+    opacity: 0.5; 
 }
 
 .navigation {
     display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    gap: 10px; /* Add some space between the buttons */
-    margin-top: 20px; /* Space above the buttons */
-  }
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 20px; 
+}
   
-  .navigation button {
+.navigation button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -144,8 +143,99 @@ font-style: italic;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
   
-  .navigation button:hover {
+.navigation button:hover {
     background-color: #0056b3;
-  }
+}
+
+/* NEW STYLES FOR MAIN PAGE ONLY */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.main-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+}
+
+.main-content img {
+    margin: 2rem auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.main-content h3 {
+    margin: 2rem 0;
+    color: #2c3e50;
+    font-weight: 300;
+}
+
+.main-content .introduction {
+    margin: 2rem 0;
+}
+
+.page-grid {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.page-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-row li {
+    flex: 1;
+}
+
+.main-content .manuscript-pages ul li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.main-content .manuscript-pages ul li a:hover {
+    background: white;
+    transform: translateX(5px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.main-content .resources {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.main-content .resources ul li a {
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.main-content .resources ul li a:hover {
+    color: #000;
+}
+
+.title-box {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}

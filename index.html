@@ -16,7 +16,7 @@
   <title>Frankenstein Edition</title>
   <link href="style.css" rel="stylesheet">
 </head>
-  <body>
+<body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Frankenstein</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,55 +50,58 @@
         <h1>Mary Wollstonecraft Shelley - <span class="gothic">Frankenstein</span></h1>
       </div>
       
-      <div class="row">
-        <div class="col-5">   
-            <p>Welcome to the mini digital edition of Mary Shelley's <i>Frankenstein</i>. Made as a project for Text as Data II, taught at the University of Antwerp.</p>
-          <p>Give here some context about the manuscript and the assignment by writing directly into the html, for example:</p>
-          <ul>
-            <p>
-            <li>A photograph of Mary Shelley and Percy Shelley;</li>
-          </p>
-            <p>
-            <img src="images/Mary-and-Percy-Shelley.jpg" alt="Mary and Percy Shelley" style="max-width:100%; height:auto;">
-          </p>
-            <p>
-            <li> A table/list with the pages in this digital edition;</li>
-          </p>
-          <p></p>
-            <ul>
-              <li><a href="https://formalontology.github.io/minifrankenstein/21r.html">Page 21r</a></li>
-              <li><a href="https://formalontology.github.io/minifrankenstein/21v.html">Page 21v</a></li>
-              <li><a href="https://formalontology.github.io/minifrankenstein/22r.html">Page 22r</a></li>
-              <li><a href="https://formalontology.github.io/minifrankenstein/22v.html">Page 22v</a></li>
-              <li><a href="https://formalontology.github.io/minifrankenstein/23r.html">Page 23r</a></li>
-              <li><a href="https://formalontology.github.io/minifrankenstein/23v.html">Page 23v</a></li>
-              <li><a href="https://formalontology.github.io/minifrankenstein/24r.html">Page 24r</a></li>
-              <li><a href="https://formalontology.github.io/minifrankenstein/24v.html">Page 24v</a></li>
-              <li><a href="https://formalontology.github.io/minifrankenstein/25r.html">Page 25r</a></li>
-              <li><a href="https://formalontology.github.io/minifrankenstein/25v.html">Page 25v</a></li>
-          
-            </ul>
-          </p>
+      <div class="row justify-content-center">
+        <div class="col-8 text-center main-content">   
+            <div class="introduction">
+                <p>Welcome to the mini digital edition of Mary Shelley's <i>Frankenstein</i>. Made as a project for Text as Data II, taught at the University of Antwerp.</p>
+            </div>
 
-            <p>
-              Resources:
-            </p>
+            <div class="authors-section">
+                <h3>The Authors</h3>
+                <img src="images/Mary-and-Percy-Shelley.jpg" alt="Mary and Percy Shelley" style="max-width:100%; height:auto;">
+            </div>
 
-<ul>
-  <li><a href="https://www.bodleian.ox.ac.uk/home">Bodleian Library</a></li>
-  <li><a href="http://shelleygodwinarchive.org/">Shelley Godwin Archive</a></li>
-  <li><a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a></li>
-  <li><a href="https://bdmpmanual.uantwerpen.be/">TEI Encoding Manual</a></li>
-</ul>
-          </ul>
-          <p><b>Style all the pages the way you want by diving into the css file.</b></p>
+            <div class="manuscript-pages">
+                <h3>Manuscript Pages</h3>
+                <ul class="page-grid">
+                    <div class="page-row">
+                        <li><a href="https://formalontology.github.io/minifrankenstein/21r.html">Page 21r</a></li>
+                        <li><a href="https://formalontology.github.io/minifrankenstein/21v.html">Page 21v</a></li>
+                    </div>
+                    <div class="page-row">
+                        <li><a href="https://formalontology.github.io/minifrankenstein/22r.html">Page 22r</a></li>
+                        <li><a href="https://formalontology.github.io/minifrankenstein/22v.html">Page 22v</a></li>
+                    </div>
+                    <div class="page-row">
+                        <li><a href="https://formalontology.github.io/minifrankenstein/23r.html">Page 23r</a></li>
+                        <li><a href="https://formalontology.github.io/minifrankenstein/23v.html">Page 23v</a></li>
+                    </div>
+                    <div class="page-row">
+                        <li><a href="https://formalontology.github.io/minifrankenstein/24r.html">Page 24r</a></li>
+                        <li><a href="https://formalontology.github.io/minifrankenstein/24v.html">Page 24v</a></li>
+                    </div>
+                    <div class="page-row">
+                        <li><a href="https://formalontology.github.io/minifrankenstein/25r.html">Page 25r</a></li>
+                        <li><a href="https://formalontology.github.io/minifrankenstein/25v.html">Page 25v</a></li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="resources">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://www.bodleian.ox.ac.uk/home">Bodleian Library</a></li>
+                    <li><a href="http://shelleygodwinarchive.org/">Shelley Godwin Archive</a></li>
+                    <li><a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a></li>
+                    <li><a href="https://bdmpmanual.uantwerpen.be/">TEI Encoding Manual</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col-7" id="text"></div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
