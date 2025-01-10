@@ -72,7 +72,7 @@ color: blue;
 color: green;
 }
 
-/* Style for page numbers to appear in a circle /
+
 .page-number-circle {
 display: inline-block;
 font-size: 1.2em;
@@ -85,8 +85,9 @@ height: 40px;
 text-align: center;
 line-height: 40px;
 margin: 10px 0;
-position: relative;  / Add this /
-z-index: 1;         / Add this */
+position: relative;
+z-index: 1;         
+}
 
 .manuscript-page .header {
 display: flex;
