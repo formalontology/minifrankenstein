@@ -7,28 +7,37 @@
     
     <!-- <xsl:output method="xml" omit-xml-declaration="yes" indent="yes" /> -->
 
-    
+
     <xsl:template match="tei:TEI">
                      <div class="row">
                          <div class="col">
                              <h4>About the manuscript page:</h4>
                              <xsl:value-of select="//tei:sourceDesc"/>
-                             <xsl:value-of select="//tei:licence"/> <!-- You can change the way the metadata is visualised as well-->
+                             <xsl:value-of select="//tei:licence"/>
                          </div>
                          <div class="col">
                             <ul> 
                                 <li>Total number of modifications: 
-                                    <xsl:value-of select="count(//tei:del|//tei:add)" /> <!-- Counts all the add and del elements, and puts it in a list item -->
+                                    <xsl:value-of select="count(//tei:del|//tei:add)"/>
                                 </li>
                                 <li>Number of additions: 
-                                    <!-- count the additions only -->
+                                    <xsl:value-of select="count(//tei:add)"/>
                                 </li>
-                                <!-- add other list items in which you count things, such as the modifications made by Percy -->
+                                <li>PBS modifications: 
+                                    <xsl:value-of select="count(//*[@hand='#PBS'])"/>
+                                </li>
+                                <li>MWS modifications: 
+                                    <xsl:value-of select="count(//*[@hand='#MWS'])"/>
+                                </li>
+                                <li>Words on page: 
+                                    <xsl:value-of select="count(//text()[not(ancestor::tei:teiHeader)])"/>
+                                </li>
                             </ul>
                         </div>
                      </div>
         <hr/>
     </xsl:template>
-    
+
 
 </xsl:stylesheet>
+
