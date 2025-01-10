@@ -122,3 +122,15 @@ p {
     margin-top: 20px;
     text-indent: 20px;
 }
+
+.indent-1 {
+    padding-left: 2em;
+}
+
+.indent-2 {
+    padding-left: 4em;
+}
+
+.poem {
+    font-style: italic;
+}
