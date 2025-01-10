@@ -1,136 +1,124 @@
 body {
-
 }
-
 .starter-template {
-  padding: 40px 15px;
-  text-align: center;
+padding: 40px 15px;
+text-align: center;
 }
-
 img {
-    max-width: 100%;
+max-width: 100%;
 }
-
 p {
-    text-indent: 10px;
+text-indent: 10px;
 }
-
 .row {
-    width: 100%;
-    margin-left: 0;
+width: 100%;
+margin-left: 0;
 }
-
 .col {
-  margin-left: 10px;
-  margin-right: 10px;
+margin-left: 10px;
+margin-right: 10px;
 }
-
 .marginAdd {
-    display: none;
+display: none;
 }
-
 .mirador-canvas-nav {
-    display: none !important;
+display: none !important;
 }
-
 .gothic {
-    font-family: 'UnifrakturCook', sans-serif;
-    font-size: 2em;
-    color: #111;
+font-family: 'UnifrakturCook', sans-serif;
+font-size: 2em;
+color: #111;
 }
-
 .manuscript-page #text {
-    max-width: 25%;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.6;
-    padding: 20px;
-    font-family: 'Georgia', serif;
-    font-size: 16px;
+max-width: 25%;
+margin: 0 auto;
+text-align: justify;
+line-height: 1.6;
+padding: 20px;
+font-family: 'Georgia', serif;
+font-size: 16px;
 }
-
 .supraAdd {
-    position: relative;
-    top: -10px;
-    font-size: 0.9em;
-    color: #111;
+position: relative;
+top: -10px;
+font-size: 0.9em;
+color: #111;
 }
-
 .underlined {
-    text-decoration: underline;
+text-decoration: underline;
 }
-
 .overwrittenAdd {
-    color: blue;
+color: blue;
 }
-
 .transcription {
-    font-family: 'Georgia', serif;
-    line-height: 1.8;
-    text-align: justify;
+font-family: 'Georgia', serif;
+line-height: 1.8;
+text-align: justify;
 }
-
 .left-margin {
-    position: relative;  /* Changed from absolute */
-    width: 100%;        /* Changed from 20% */
-    font-size: 0.9em;
-    color: #555;
-    padding: 10px;
+position: relative;  /* Changed from absolute /
+width: 100%;        / Changed from 20% */
+font-size: 0.9em;
+color: #555;
+padding: 10px;
 }
-
 .marginal-text {
-    margin-bottom: 10px;  /* Add space between margin notes */
+margin-bottom: 10px;  /* Add space between margin notes */
 }
-
 .marginal-text[data-hand="#PBS"] {
-    color: blue;
+color: blue;
 }
-
 .marginal-text[data-hand="#MWS"] {
-    color: green;
+color: green;
 }
-
 .marginal-text[data-hand="#MWS"] {
-    color: green; /* Style Mary Shelley’s text */
+color: green; /* Style Mary Shelley's text */
 }
-
-/* Style for page numbers to appear in a circle */
+/* Style for page numbers to appear in a circle /
 .page-number-circle {
-    display: inline-block;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: black;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    margin: 10px 0;
-    position: relative;  /* Add this */
-    z-index: 1;         /* Add this */
+display: inline-block;
+font-size: 1.2em;
+font-weight: bold;
+color: black;
+border: 2px solid black;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+text-align: center;
+line-height: 40px;
+margin: 10px 0;
+position: relative;  / Add this /
+z-index: 1;         / Add this */
 }
-
 .manuscript-page .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-top: 20px;
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+margin-top: 20px;
 }
-
 .manuscript-page .text-body {
-    margin-top: 20px;
-    text-indent: 20px;
+margin-top: 20px;
+text-indent: 20px;
 }
-
 .indent-1 {
-    padding-left: 2em;
+padding-left: 2em;
 }
-
 .indent-2 {
-    padding-left: 4em;
+padding-left: 4em;
 }
-
 .poem {
-    font-style: italic;
+font-style: italic;
+}
+/* Modifications for color-coding */
+.mws {
+color: green;
+}
+.pbs {
+color: blue;
+}
+.highlight-mws .pbs {
+opacity: 0.5; /* Adjust the opacity value as needed */
+}
+.highlight-pbs .mws {
+opacity: 0.5; /* Adjust the opacity value as needed */
 }
