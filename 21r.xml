@@ -34,43 +34,70 @@
             <pb facs="#p21r"/>
             <metamark function="pagenumber"><num><hi rend="circled">75</hi></num></metamark>
             <zone type="left_margin">
-                <p><add place="marginleft" hand="#PBS">beautiful</add></p>
-                <p><add place="marginleft" hand="#MWS"><del rend="strikethrough">handsome</del></add></p>
-                <p><add place="marginleft" hand="#MWS">yellow</add></p>
-                <p><add place="marginleft" hand="#PBS">of a lustrous black &amp;</add></p>
+               <p><add place="marginleft" hand="#PBS">beautiful</add></p>
+               <p><add place="marginleft" hand="#MWS"><del rend="strikethrough">handsome</del></add></p>
+               <p><add place="marginleft" hand="#MWS">yellow</add></p>
+               <p><add place="marginleft" hand="#PBS">of a lustrous black &amp;</add></p>
             </zone>
-            <p style="text-align:center">
-               Chapter 7<hi rend="sup"><hi rend="u">th</hi></hi>
-            </p>
             <p>
+                <line rend="center"><milestone unit="tei:head" spanTo="#c56-0045.04"/>Chapter 7<hi rend="sup"><hi rend="underline">th</hi></hi><anchor xml:id="c56-0045.04"/></line>
+            </p>
+            <p rend="indent1">
                It was on a dreary night of November<lb/>
-               that I beheld <del type="crossedOut" hand="#PBS"><add place="supralinear" hand="#PBS">the frame on whic</add></del> my man comple<del type="overwritten" hand="#PBS">at</del><add place="overwritten" hand="#PBS">te</add>ed<del type="overwritten" hand="#PBS">.</del><add place="overwritten" hand="#PBS">,</add> <del type="crossedOut" hand="#PBS">And</del><lb/>
+               that I beheld <del rend="strikethrough"><add place="superlinear" hand="#PBS">the frame on whic</add></del> my man comple<mod>
+                    <del rend="overwritten">at</del>
+                    <add place="intralinear">te</add>
+                    <add>ed</add>
+                </mod><add place="intralinear" hand="#PBS">,</add>. <del rend="strikethrough">And</del><lb/>
                with an anxiety that almost amount<lb/>
                ed to agony I collected instruments of life<lb/>
-               around me <del type="crossedOut" hand="#MWS">and endeavour to</del> <add place="supralinear" hand="#PBS">that I might</add> <del type="overwritten" hand="#PBS">e</del><add place="overwritten" hand="#PBS">i</add>nfuse a<lb/>
-               spark of being into the lifeless thin<del type="overwritten" hand="#MWS">k</del><add place="overwritten" hand="#MWS">g</add><lb/>
+               around me <mod>
+                    <del rend="strikethrough">and endeavour to</del>
+                    <add place="superlinear">that I might</add>
+                </mod>
+                <mod>
+                    <del rend="overwritten">e</del>
+                    <add place="intralinear">i</add>
+                </mod>nfuse a<lb/>
+               spark of being into the lifeless thin<mod>
+                    <del rend="overwritten">k</del>
+                    <add place="intralinear">g</add>
+                </mod><lb/>
                that lay at my feet. It was already<lb/>
                one in the morning, the rain pattered<lb/>
                dismally against the window panes, &amp;<lb/>
                my candle was nearly burnt out, when<lb/>
-               by the glimmer of the half extinguish<lb/>
+               by the glimmer of the half extinguish-<lb/>
                ed light I saw the dull yellow eye of<lb/>
-               the creature open<del type="overwritten" hand="#PBS">.</del><add place="overwritten" hand="#PBS">—</add>It breathed hard,<lb/>
+               the creature open.&#x2014;It breathed hard,<lb/>
                and a convulsive motion agitated<lb/>
-               its limbs.
+               its limbs.<lb/>
             </p>
-            <p>
-               <del type="crossedOut" hand="#MWS">But how</del> How can I describe my<lb/>
+            <p rend="indent1">
+               <del rend="strikethrough">But how</del> How can I describe my<lb/>
                emotion at this catastrophe; or how deli<lb/>
                neate the wretch whom with such<lb/>
                infinite pains and care I had endeavoured<lb/>
                to form. His limbs were in proportion<lb/>
-               and I had selected his features <del type="crossedOut" hand="#MWS">h</del> as<lb/>
-               <del type="crossedOut" hand="#MWS">handsome</del> <add place="marginleft" hand="#PBS">beautiful</add><del type="crossedOut" hand="#PBS"><add place="marginleft" hand="#MWS">handsome</add></del>. <del type="crossedOut" hand="#PBS">Handsome</del><add place="supralinear" hand="#PBS">beautiful</add>; Great God! His<lb/>
-               <del type="crossedOut" hand="#MWS">dun</del> <add place="marginleft" hand="#MWS">yellow</add> skin scarcely covered the work of<lb/>
+               and I had selected his features <del rend="strikethrough">h</del> as<lb/>
+               <mod>
+                    <del rend="strikethrough">handsome</del>
+                    <del rend="unmarked">.</del>
+                    <anchor xml:id="c56-0045.01"/>
+                </mod>
+                <mod>
+                    <del rend="strikethrough">Handsome</del>
+                    <add place="superlinear" hand="#PBS">Beautiful</add>
+                </mod>; Great God! His<lb/>
+               <mod>
+                    <del rend="strikethrough">dun</del>
+                    <anchor xml:id="c56-0045.02"/>
+                </mod> skin scarcely covered the work of<lb/>
                muscles and arteries beneath; his hair<lb/>
-               was <add place="marginleft" hand="#MWS">of a lustrous black &amp;</add> flowing and his teeth of a pearly white<lb/>
-               ness but these luxurianc<add place="intralinear" hand="#MWS">i</add>es only <del type="crossedOut" hand="#MWS">fomed</del><lb/>
+               was<mod>
+                    <add place="sublinear"><metamark function="displacement" xml:id="c56-0045.03">^</metamark></add>
+                </mod> flowing and his teeth of a pearly white<lb/>
+               ness but these luxurianc<add place="intralinear">i</add>es only <del rend="strikethrough">fomed</del><lb/>
                formed a more horrid contrast with<lb/>
                his watry eyes that seemed almost of<lb/>
                the same colour as the dun white<lb/>
