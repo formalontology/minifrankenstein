@@ -31,7 +31,7 @@ p {
     color: #111;
 }
 .manuscript-page #text {
-    max-width: 25%;
+    max-width: 50%;
     margin: 0 auto;
     text-align: justify;
     line-height: 1.6;
