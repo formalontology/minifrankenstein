@@ -173,6 +173,19 @@ p {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* This is where we add our new styles for the main page */
+.main-content .authors-section h5 {
+    font-size: 0.9rem;  /* Smaller "The Authors" title */
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.main-content .image-credit {
+    font-size: 0.75rem;  /* Smaller image source text */
+    color: #666;
+    margin-top: 10px;
+}
+
 .main-content h3 {
     margin: 2rem 0;
     color: #2c3e50;
