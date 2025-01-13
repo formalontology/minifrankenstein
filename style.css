@@ -285,20 +285,20 @@ p {
 /* Style for superscript */
 sup {
     vertical-align: super;
-    font-size: 0.9em; /* Slightly smaller than normal text */
-    color: inherit; /* Inherit text color to keep consistency */
+    font-size: 0.9em; 
+    color: inherit; 
 }
 
 /* Style for underlined text */
 u {
     text-decoration: underline;
-    color: inherit; /* Inherit text color to keep consistency */
+    color: inherit; 
 }
 
 /* Style for superlinear text */
 .superlinear {
     position: relative;
-    top: -1em; /* Adjust to move the text higher */
-    font-size: 0.9em; /* Slightly smaller font size */
-    color: inherit; /* Match text color */
+    top: -1em; 
+    font-size: 0.9em; 
+    color: inherit; 
 }
