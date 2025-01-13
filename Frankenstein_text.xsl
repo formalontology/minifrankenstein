@@ -42,17 +42,17 @@
         </div>
     </xsl:template>
 
-    <!-- Add this new template for superlinear text -->
+    <!-- Handle Superlinear Text -->
     <xsl:template match="tei:add[@place='superlinear']">
-    <sup>
-        <xsl:if test="@hand">
-            <xsl:attribute name="class">
-                <xsl:value-of select="concat('hand-', substring-after(@hand, '#'))"/>
-            </xsl:attribute>
-        </xsl:if>
-        <xsl:apply-templates/>
-    </sup>
-</xsl:template>
+        <span class="superlinear">
+            <xsl:if test="@hand">
+                <xsl:attribute name="data-hand">
+                    <xsl:value-of select="concat('hand-', substring-after(@hand, '#'))"/>
+                </xsl:attribute>
+            </xsl:if>
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
 
     <!-- Transform Standard Paragraph -->
     <xsl:template match="tei:p">
@@ -71,6 +71,20 @@
         <del>
             <xsl:apply-templates/>
         </del>
+    </xsl:template>
+
+    <!-- Handle Superscript Text -->
+    <xsl:template match="tei:hi[@rend='sup']">
+        <sup>
+            <xsl:apply-templates/>
+        </sup>
+    </xsl:template>
+
+    <!-- Handle Underlined Text -->
+    <xsl:template match="tei:hi[@rend='u']">
+        <u>
+            <xsl:apply-templates/>
+        </u>
     </xsl:template>
 
     <!-- Handle text by Mary Shelley -->

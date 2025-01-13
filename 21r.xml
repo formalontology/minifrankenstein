@@ -45,10 +45,11 @@
             <p rend="indent1">
                It was on a dreary night of November<lb/>
                that I beheld <mod>
-                    <del rend="strikethrough">the frame on whic</del>
-                    <add place="superlinear" hand="#PBS">the frame on whic</add>
+                  <del rend="strikethrough">
+                     <add place="superlinear" hand="#PBS">the frame on whic</add>
+                  </del>
                </mod> my man comple<mod>
-                    <del rend="overwritten">at</del>
+                    <del rend="strikethrough">at</del>
                     <add place="intralinear">te</add>
                     <add>ed</add>
                 </mod><add place="intralinear" hand="#PBS">,</add>. <del rend="strikethrough">And</del><lb/>

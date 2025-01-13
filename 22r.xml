@@ -45,7 +45,7 @@
                <add place="intralinear" hand="#PBS">:</add>
            </mod><lb/>
            <mod>
-               <del rend="overwritten">a</del>
+               <del rend="strikethrough">a</del>
                <add place="intralinear">A</add>
            </mod> shroud enveloped her form &amp; I saw<lb/>
            the grave worms crawling in the folds of<lb/>
@@ -93,7 +93,7 @@
            sound as if it were to announce the<lb/>
            arrival of the demoniacal corpse to<lb/>
            which I had so miserabl<mod>
-               <del rend="overwritten">e</del>
+               <del rend="strikethrough">e</del>
                <add hand="#PBS" place="intralinear">y</add>
            </mod> given life.<lb/>
        </p>
