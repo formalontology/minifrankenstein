@@ -73,6 +73,13 @@
         </del>
     </xsl:template>
 
+    <!-- Handle Bold Text -->
+    <xsl:template match="tei:hi[@rend='bold']">
+        <b>
+            <xsl:apply-templates/>
+        </b>
+    </xsl:template>
+
     <!-- Handle Superscript Text -->
     <xsl:template match="tei:hi[@rend='sup']">
         <sup>
